@@ -1,0 +1,31 @@
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# large / regenerable data (kept locally, not committed)
+# pattern_matrix.npy -> rebuild with: python src/build_pm.py
+# games.jsonl        -> rebuild with: scrape.py then parse.py
+# *.parquet          -> rebuild with: python src/features.py
+data/pattern_matrix.npy
+data/games.jsonl
+data/games_backup.jsonl
+data/eguess_cache.pkl
+*.parquet
+*_backup*
+*.tar.gz
+raw/
+
+# run outputs
+data/scaling_*.jsonl
+data/scaling_*_run.log
+data/probe.jsonl
+data/smoke.jsonl
+
+# java build artifacts
+src/*.class
+
+# secrets
+*.key
+*.pem
+.env
